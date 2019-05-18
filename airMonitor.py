@@ -308,7 +308,7 @@ class AirMonitors:
 
         """
 
-        path = "/stationdata/period/{uniqueId}"
+        path = f"/stationdata/period/{uniqueId}"
         return self.AirMonitorsRequest(path)
 
     def getUnits(self):
