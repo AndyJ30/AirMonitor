@@ -156,6 +156,8 @@ Returns a `list` of `dict`s containing the Altitude, CustomerID, Firmware, IMSI,
 ## getStationSetup( uniqueId )
 Gets the details of all sensors on the specified station
 
+`uniqueId`: uniqueId of the station to return data from  
+
 Returns a `list` of `dict`s containing the sensor attributes for each sensor on the specified station:
 
 ```python
@@ -171,6 +173,8 @@ Returns a `list` of `dict`s containing the sensor attributes for each sensor on 
 ## getStationPeriod( uniqueId )
 Gets the range of data for the specified station.
 
+`uniqueId`: uniqueId of the station to return data from  
+
 Returns a `list` containing a `dict` containing First/Last Time Beginning/Time Ending dates for the available data:
 
 ```python
@@ -183,12 +187,12 @@ Returns a `list` containing a `dict` containing First/Last Time Beginning/Time E
 ## getStationData( startDate, endDate, uniqueId, [sensorTypes], [sensors], [timeConvention], [averagePeriod])
 Gets the recorded data from the specified station over the specified date range.
 
-`startDate`: datetime to return data starting from (inclusive)
-`endDate`: datetime to return data until (inclusive)
-`uniqueId`: uniqueId of the station to return data from
-`sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`
-`sensors`: (optional) Only return data for sensor types in this `list`.
-`timeConvention`: (optional) Specify whether the startDate/endDate are compared against the Time Beginning or Time Ending timestamp of each record. `airMonitors.TimeConvention.[TimeBeginning|TimeEnding]`
+`startDate`: datetime to return data starting from (inclusive)  
+`endDate`: datetime to return data until (inclusive)  
+`uniqueId`: uniqueId of the station to return data from  
+`sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`  
+`sensors`: (optional) Only return data for sensor types in this `list`.  
+`timeConvention`: (optional) Specify whether the startDate/endDate are compared against the Time Beginning or Time Ending timestamp of each record. `airMonitors.TimeConvention.[TimeBeginning|TimeEnding]`  
 `averagePeriod`: (optional) Return average data at the specified interval, instead of the raw logs. `airMonitors.AveragePeriod.[Minutes_5|Minutes_10|Minutes_15|Minutes_20|Minutes_30|Hours_1|Hours_2|Hours_3|Hours_4|Hours_6|Hours_8|Hours_12|Hours_24]`
 
 Returns a `list` of `dict`s containing the logged data:
@@ -216,10 +220,10 @@ Returns a `list` of `dict`s containing the logged data:
 ## getLatestStationData( records, uniqueId, [sensorTypes], [sensors], [averagePeriod])
 Get the specified number of most recent records form the specified station.
 
-`records`: the number of records to return 
-`uniqueId`: uniqueId of the station to return data from
-`sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`
-`sensors`: (optional) Only return data for sensor types in this `list`.
+`records`: the number of records to return  
+`uniqueId`: uniqueId of the station to return data from  
+`sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`  
+`sensors`: (optional) Only return data for sensor types in this `list`.  
 `averagePeriod`: (optional) Return average data at the specified interval, instead of the raw logs. `airMonitors.AveragePeriod.[Minutes_5|Minutes_10|Minutes_15|Minutes_20|Minutes_30|Hours_1|Hours_2|Hours_3|Hours_4|Hours_6|Hours_8|Hours_12|Hours_24]`
 
 Returns a `list` of `dict`s containing the logged data:
@@ -244,9 +248,9 @@ Returns a `list` of `dict`s containing the logged data:
 ## getCalibrationData( startDate, endDate, uniqueId )
 Gets the calibration data from the specified station over the specified date range.
 
-`startDate`: datetime to return data starting from (inclusive)
-`endDate`: datetime to return data until (inclusive)
-`uniqueId`: uniqueId of the station to return data from
+`startDate`: datetime to return data starting from (inclusive)  
+`endDate`: datetime to return data until (inclusive)  
+`uniqueId`: uniqueId of the station to return data from  
 
 Returns a `list` of `dict`s containing the calibration data:
 
