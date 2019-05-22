@@ -191,7 +191,7 @@ Gets the recorded data from the specified station over the specified date range.
 `endDate`: datetime to return data until (inclusive)  
 `uniqueId`: uniqueId of the station to return data from  
 `sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`  
-`sensors`: (optional) Only return data for sensors with labels in this `list` of `strings`.
+`sensors`: (optional) Only return data for sensors with labels in this `list` of `strings`.  
 `timeConvention`: (optional) Specify whether the startDate/endDate are compared against the Time Beginning or Time Ending timestamp of each record. `airMonitors.TimeConvention.[TimeBeginning|TimeEnding]`  
 `averagePeriod`: (optional) Return average data at the specified interval, instead of the raw logs. `airMonitors.AveragePeriod.[Minutes_5|Minutes_10|Minutes_15|Minutes_20|Minutes_30|Hours_1|Hours_2|Hours_3|Hours_4|Hours_6|Hours_8|Hours_12|Hours_24]`
 
@@ -223,7 +223,7 @@ Get the specified number of most recent records form the specified station.
 `records`: the number of records to return  
 `uniqueId`: uniqueId of the station to return data from  
 `sensorTypes`: (optional) Only return data for this sensor type. `airMonitors.SensorType.[Data|Diagnostic|All]`  
-`sensors`: (optional) Only return data for sensors with labels in this `list` of `strings`.
+`sensors`: (optional) Only return data for sensors with labels in this `list` of `strings`.  
 `averagePeriod`: (optional) Return average data at the specified interval, instead of the raw logs. `airMonitors.AveragePeriod.[Minutes_5|Minutes_10|Minutes_15|Minutes_20|Minutes_30|Hours_1|Hours_2|Hours_3|Hours_4|Hours_6|Hours_8|Hours_12|Hours_24]`
 
 Returns a `list` of `dict`s containing the logged data:
